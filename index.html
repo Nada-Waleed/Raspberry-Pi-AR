@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raspberry Pi</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+      }
+      .container {
+        position: relative;
+        
+      }
+      .centered {
+        position: absolute;
+        margin-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+      }
+      .centered button {
+        margin-bottom: 10px;
+        border-color: #007bff;
+      }
+      .centered img {
+        margin: 20px 0;
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      .container.border {
+        border: 2px solid #007bff;
+        padding: 20px;
+        margin-bottom: 20px; /* Add margin to create space */
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      #logo {
+        display: block;
+        margin: 10px auto;
+        max-width: 15%;
+        height: auto;
+      }
+
+      #objectImage {
+        max-width: 50%;
+        max-height: 50%;
+      }
+      .btn:hover{
+        background-color: azure ;
+        color:#0275d8;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="container border pt-3 mt-5" style="border: 5px solid #0275d8;">
+      <img id="logo" src="assets\Logo.jpg" alt="Logo"  class="pb-2 image-fluid"/>
+      <h1 style="color: #0275d8;">Raspberry Pi!!</h1>
+      <p style="color: gray; text-align: left;" class="pt-3 pb-3 container">
+        A mainstay in the world of makers and electronics,
+         The Raspberry Pi® is a single-board, low-cost,
+          high-performance computer first developed in the UK by the Raspberry Pi Foundation.
+           Not only has it helped bring the joy of electronics and computer programming to people around the world, 
+           but it has also become a staple of the maker community.
+            The ever-present Pi in its latest iteration—Raspberry Pi 4 Model B—as the Pi Foundation continues to improve on an already excellent product.
+             There’s also the five-dollar Pi Zero – a game-changing Raspberry Pi in a much smaller package – as well as its WiFi-laced cousin,
+              the Pi Zero W.
+      </p>
+      <img id="objectImage" src="assets/Raspberry-Pi.jpg" alt="Lungs" class="image-fluid" /><br><br>
+      <!-- <div class="centered"> -->
+        <a href="model page.html" target="_blank">
+          <button type="button" class="btn btn-primary">
+            Learn From 3d Model!
+          </button>
+        </a><br>
+
+        <audio id="audioPlayer" >
+          <source src="assets\raspberry.m4a" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <button type="button" class="btn btn-primary mt-3 mb-3" onclick="playAudio()" ondblclick="stop()" > 
+          Play Audio For Illustration!
+        </button><br>
+
+        <a href="https://www.adafruit.com/category/105" target="_blank">
+          <button type="button" class="btn btn-primary">
+            Additional Resources
+          </button>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Add Bootstrap JS -->
+    <script>
+      function playAudio() {
+        var audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.play();
+      }
+      function stop() {
+        document.getElementById('audioPlayer').pause();
+        return false;
+      }
+     
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
